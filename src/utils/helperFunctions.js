@@ -1,4 +1,3 @@
-
 export const formatDate = (date) => {
     const newDate = new Date(date);
     const monthName = newDate.toLocaleString('default', { month: 'long' });

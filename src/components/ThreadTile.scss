@@ -5,6 +5,26 @@
   color: #88888b;
 };
 
+@function stacked-effect($amount) {
+  $color: white;
+  $stack-size: 4px;
+  $alpha: 0.1;
+  $bottom: 1px;
+  $side: 1px;
+  $ret: 1px 1px 0 #{rgba(darken($color,90%), $alpha)};
+  @for $i from 1 through $amount {
+    $bottom: $bottom + $stack-size;
+    $side: $side + $stack-size;
+    $alpha: $alpha + 0.025;
+    $ret: $ret, #{$side} #{$bottom} 0 #{$color};
+    $bottom: $bottom + 1;
+    $side: $side + 1;
+    $ret: $ret, #{$side} #{$bottom} 0 #{rgba(darken($color,90%), $alpha)}
+  }
+
+  @return $ret
+};
+
 .thread-tile {
   display: flex;
   position: relative;
@@ -71,4 +91,10 @@
 
 .message-lblue {
   background-color: var(--lblue);
+};
+
+@for $i from 2 through 3 {
+  .stacked-effect#{$i}{
+    box-shadow: stacked-effect($i - 1);
+  }
 };

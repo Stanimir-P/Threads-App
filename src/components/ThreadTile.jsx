@@ -7,7 +7,7 @@ export const ThreadTile = (props) => {
     const messageColor = getMessageColor(props.item.score);
 
     return (
-        <div className="thread-tile" onClick={props.onClick}>
+        <div className={props.messageCount ? `thread-tile stacked-effect${props.messageCount}` : "thread-tile"} onClick={props.onClick}>
             <div className="thread-tile-left-column">
                 <div className={`thread-tile-title title-${titleColor}`}>{props.item.subject}</div>
                 <p className="thread-tile-question">{props.item.question}</p>
@@ -26,4 +26,4 @@ export const ThreadTile = (props) => {
             }
         </div> 
     );
-}
+};
