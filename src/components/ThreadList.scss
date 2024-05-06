@@ -1,7 +1,7 @@
+@import '/src/index.scss';
+
 .thread-list {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
+    @include tile-size;
     margin: 1.6em 1em;
-    min-width: 320px;
-    max-width: 768px; 
 }

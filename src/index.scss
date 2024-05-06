@@ -7,6 +7,16 @@
   --text:  #999999;
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin tile-size {
+  min-width: 320px;
+  max-width: 768px; 
+}
+
 body {
   margin: 0;
   font-family: "Comfortaa", sans-serif;

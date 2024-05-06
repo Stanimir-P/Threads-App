@@ -1,6 +1,7 @@
+@import '/src/index.scss';
+
 .thread-list-item {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: center;
     width: 100%;
 }

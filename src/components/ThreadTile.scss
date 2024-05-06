@@ -1,3 +1,10 @@
+@import '/src/index.scss';
+
+@mixin text-bold {
+  font-weight: 550;
+  color: #88888b;
+};
+
 .thread-tile {
   display: flex;
   position: relative;
@@ -20,21 +27,18 @@
     }
 
     p:last-child {
-      font-weight: 550;
-      color: #88888b;
+      @include text-bold;
       margin-top: 1em;
     }
   }
 
   .thread-tile-right-column {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     flex: 1;
     align-items: flex-end;
 
     .thread-team {
-      font-weight: 550;
-      color: #88888b;
+      @include text-bold;
     }
 
     .thread-date {
