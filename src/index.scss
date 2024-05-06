@@ -1,7 +1,16 @@
+:root {
+  --white: white;
+  --orange: #e89d40;
+  --purple: #9335ff;
+  --lblue: #27aae1;
+  --background-color: #f2f2f2;
+  --text:  #999999;
+}
+
 body {
   margin: 0;
   font-family: "Comfortaa", sans-serif;
-  background-color: #f2f2f2;
-  color: #999999;
+  background-color: var(--background-color);
+  color: var(--text);
   font-size: 0.9em;
 }
