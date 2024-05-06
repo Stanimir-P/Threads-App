@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { ThreadList } from './components/ThreadList';
 
 function App() {

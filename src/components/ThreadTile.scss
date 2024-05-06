@@ -1,0 +1,43 @@
+.thread-tile {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8em 0;
+  padding: 1.6em;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px -8px rgba(193, 147, 147, 0.75);
+  
+  p {
+    margin: 0;
+  }
+
+  .thread-tile-left-column {
+    flex: 3;
+
+    .thread-tile-question {
+      font-size: 0.8em;
+    }
+
+    p:last-child {
+        font-weight: 550;
+        color: #88888b;
+        margin-top: 1em;
+    }
+  }
+
+  .thread-tile-right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-end;
+
+    .thread-team {
+        font-weight: 550;
+        color: #88888b;
+    }
+
+    .thread-date {
+      font-size: 0.8em;
+    }
+  }
+};

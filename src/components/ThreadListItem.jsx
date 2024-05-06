@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ThreadTile } from "./ThreadTile";
+import "./ThreadListItem.scss";
 
 export const ThreadListTile = (props) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -9,7 +10,7 @@ export const ThreadListTile = (props) => {
     }
 
     return (
-        <div>
+        <div className="thread-list-item">
             {isExpanded 
                 ? props.data.map(tile => <ThreadTile item={tile} key={tile.id} />)
                 : <ThreadTile item={props.data[0]} onClick={handleExpand}/>

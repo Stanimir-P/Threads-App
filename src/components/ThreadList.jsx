@@ -1,4 +1,5 @@
-import { ThreadListTile } from "./ThreadListItem"
+import { ThreadListTile } from "./ThreadListItem";
+import "./ThreadList.scss";
 
 const mockedData = [
     [
@@ -57,5 +58,9 @@ const mockedData = [
 ]
 
 export const ThreadList = () => {
-    return mockedData.map(data => <ThreadListTile data={data} /> )
+    return (
+        <div className="thread-list">
+            {mockedData.map((data, index) => <ThreadListTile data={data} key={index} />)}
+        </div>
+    )
 }
